@@ -1,0 +1,48 @@
+---Requirements---
+
+1]Set Up a Virtual Environment
+
+Create a virtual environment:
+[python -m venv env]
+
+Activate the virtual environment:
+[.\env\Scripts\activate]
+
+2]Install Django
+
+Install Django using pip:
+[pip install django]
+
+Install Other Libraries
+[pip install pillow django-crispy-forms]
+
+3]Install VS Code Extensions
+[Python
+Django]
+
+4]Configure Python Interpreter---
+
+When choosing the Python interpreter from your virtual environment in VS Code, follow these detailed steps:
+
+Activate the Command Palette:Press Ctrl+Shift+P (Windows/Linux) 
+
+Search for the Python Interpreter:
+Type Python: Select Interpreter in the command palette search bar.
+Select the Virtual Environment:
+From the list of available Python environments, select the one located in your project's env directory. It should look like:
+
+[ecommerce_project/env/bin/python]or[ecommerce_project\env\Scripts\python.exe]
+Verify the Interpreter:
+Open a terminal in VS Code and activate the virtual environment if not already activated:
+[.\env\Scripts\activate]    # Windows
+Run:
+[python --version]--in the vscode terminal
+
+5]Database Setup----
+a. Migrate the Database
+Apply migrations:
+[python manage.py migrate]
+
+b. Create a Superuser
+Create an admin user:
+[python manage.py createsuperuser]---create username and password 
