@@ -1,0 +1,14 @@
+<h2>Checkout</h2>
+<h3>Cart Items</h3>
+<ul>
+    {% for product in cart_products %}
+        <li>{{ product.name }} - ${{ product.price }}</li>
+    {% endfor %}
+</ul>
+<form method="post">
+    {% csrf_token %}
+    <label for="address">Enter Delivery Address:</label>
+    <textarea name="address" id="address" required></textarea>
+    <br><br>
+    <button type="submit">Place Order</button>
+</form>
